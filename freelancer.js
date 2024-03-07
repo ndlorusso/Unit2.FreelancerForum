@@ -17,28 +17,19 @@ const newFreelancers = [
     { name: "Prof. Goose", price: 72, occupation: "driver" },
   ];
 
-// const addShapeIntervalId = setInterval(addShape, 1000);
 const addFreelancerIntervalId = setInterval(addFreelancer, 1000);
 render();
-
-// const squares = document.querySelector("#squares");
-//   const squareElements = shapes.map((shape) => {
-//     const element = document.createElement("li");
-//     element.classList.add(shape.color, shape.size);
-//     return element;
-//   });
-//   squares.replaceChildren(...squareElements);
 
 function calculateAverage() {
     let sum = freelancers.reduce((total, freelancer) => total + freelancer.price, 0);
     return sum / freelancers.length;
 }
 
+// FUNCTION TO CALC AVERAGE BY PULLING DATA FROM OBJECTS AND AVERAGING
 // function calcAverage () {
 //     freelancers.reduce(newFreelancers.price);
 // }
 // // calcAverage();
-
 
 function render () {
     const freelancersList = document.querySelector("#freelancers");
@@ -56,6 +47,3 @@ function addFreelancer() {
     freelancers.push(freelancer);
     render();
 }
-
-
-// const color = colors[Math.floor(Math.random() * colors.length)];
